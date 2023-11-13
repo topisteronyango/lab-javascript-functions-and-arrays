@@ -8,11 +8,33 @@ console.log('Iteration #1:', maxOfTwoNumbers(5, 7));
 
 
 // Iteration #2: Find longest word
+// Array of words to be checked
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+// Function to find the longest word in an array
+function findLongestWord(words) {
+  // Initialize a variable to store the index of the current longest word
+  let currentWord = 0;
+
+  // Iterate through each word in the array
+  for (let i = 0; i < words.length; i++) {
+    // Get the length of the current word
+    let length = words[i].length;
+
+    // Compare the length of the current word with the length of the current longest word
+    if (length > words[currentWord].length) {
+      // If the current word is longer, update the index of the current longest word
+      currentWord = i;
+    }
+  }
+
+  // Return the longest word found in the array
+  return words[currentWord];
+}
 
 
+let longWord = findLongestWord(words);
+console.log(longWord);
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
