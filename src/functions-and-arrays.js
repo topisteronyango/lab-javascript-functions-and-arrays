@@ -4,7 +4,7 @@ function maxOfTwoNumbers(num1, num2) {
     else return num2;
 }
 
-console.log('Iteration #1:', maxOfTwoNumbers(5, 7));
+// console.log('Iteration #1:', maxOfTwoNumbers(5, 7));
 
 
 // Iteration #2: Find longest word
@@ -34,7 +34,7 @@ function findLongestWord(words) {
 
 
 let longWord = findLongestWord(words);
-console.log(longWord);
+// console.log(longWord);
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
@@ -48,12 +48,19 @@ function sumNumbers(num) {
 };
 
 let sumNum =  sumNumbers(numbers);
-console.log(sumNum);
+// console.log(sumNum);
 
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+// should return: 57
+
+function sum() {
+  
+}
+
 
 
 
@@ -61,7 +68,22 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(myarray) {
+  let totalSum = 0
+  for(let num = 0; num < myarray.length; num++){
+    totalSum += myarray[num];
+
+  }
+
+  console.log(totalSum / myarray.length);
+}
+// let myAvg = averageNumbers(numbersAvg) / numbersAvg.length;
+// console.log(myAvg);
+averageNumbers(numbersAvg);
+
+
+
+// Iteration #4.1 Bonus:
 
 
 // Level 2: Array of strings
