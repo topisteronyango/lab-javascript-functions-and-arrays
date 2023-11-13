@@ -39,7 +39,16 @@ console.log(longWord);
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(num) {
+  let sumNum = 0
+  for (let number = 0; number < num.length; number++){
+    sumNum += num[number]
+  };
+  return sumNum;
+};
+
+let sumNum =  sumNumbers(numbers);
+console.log(sumNum);
 
 
 
