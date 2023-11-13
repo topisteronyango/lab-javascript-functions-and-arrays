@@ -55,11 +55,35 @@ let sumNum =  sumNumbers(numbers);
 // Iteration #3.1 Bonus:
 
 const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
-// should return: 57
 
-function sum() {
-  
+function sum(arr) {
+  // Initialize a variable to store the sum
+  let total = 0;
+
+  // Iterate through each element in the array
+  for (let i = 0; i < arr.length; i++) {
+    // Check the type of the current element
+    // and add its numeric value to the total
+    if (typeof arr[i] === 'number') {
+      total += arr[i];
+    } else if (typeof arr[i] === 'string') {
+      // If the element is a string, add its length to the total
+      total += arr[i].length;
+    } else if (typeof arr[i] === 'boolean') {
+      // If the element is a boolean, add 1 for true and 0 for false to the total
+      total += arr[i] ? 1 : 0;
+    }
+    // Ignore other data types
+  }
+
+  // Return the calculated sum
+  return total;
 }
+
+// Test the function with the provided array
+const result = sum(mixedArr);
+console.log(result); // Output: 57
+
 
 
 
@@ -77,8 +101,6 @@ function averageNumbers(myarray) {
 
   console.log(totalSum / myarray.length);
 }
-// let myAvg = averageNumbers(numbersAvg) / numbersAvg.length;
-// console.log(myAvg);
 averageNumbers(numbersAvg);
 
 
